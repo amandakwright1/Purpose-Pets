@@ -1,21 +1,40 @@
-/* .tickets {
+/* .task {
     display: flex;
     flex-direction: column;
 } */
-
+body {
+    background-color: palegreen;
+  }
+  
 .tasks {
     background-color: rgb(25, 203, 203);
     border: 4px solid rgb(3, 87, 87);
     padding: 0.7rem;
     margin: 0.5rem 0;
+    width:35%;
 }
 
 .create-button {
     margin-left:auto;
-    background-color:  rgb(25, 203, 203);
+    background-color:   rgb(58, 242, 242);
     border: 4px solid rgb(3, 87, 87);
 }
 /* } Create task button */
+
+.btn-save-edit{
+    margin-left:auto;
+    background-color:  rgb(58, 242, 242);
+    border: 4px solid rgb(3, 87, 87);
+}
+/* } Edit task button */
+
+
+.btn-delete{
+    margin-left:auto;
+    background-color:  rgb(58, 242, 242);
+    border: 4px solid rgb(3, 87, 87);
+}
+/*  Delete Task Button */
 
 /* .ticket_footer{
     display: flex;

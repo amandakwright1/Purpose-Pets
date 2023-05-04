@@ -16,9 +16,9 @@ export const ParentNav = () => {
             {
                 localStorage.getItem("purpose_parent")
               ? <li className="navbar__item navbar__logout">
-                        <Link className="navbar__link" to="" onClick={() => {
+                        <Link className="navbar__link" to="/login" onClick={() => {
                             localStorage.removeItem("purpose_parent")
-                            navigate("/", {replace: true})
+                            navigate("/login", {replace: true})
                         }}>Logout</Link>
                     </li>
                     : ""

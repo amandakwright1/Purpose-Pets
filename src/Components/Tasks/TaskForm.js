@@ -7,9 +7,11 @@ export const TaskForm = () => {
         initial state object
     */
     const [task, update] = useState({
-        description:"",
-        emergency: false
+        email: "",
+        fullName: "",
+        isGuardian: false
     })
+    
     /*
          Use the useNavigation() hook so you can redirect
         the user to the ticket list
@@ -101,4 +103,4 @@ export const TaskForm = () => {
             </button>
         </form>
     )
-}
+                    }               

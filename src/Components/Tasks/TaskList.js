@@ -40,13 +40,16 @@ useEffect(() => {},[])
      */}
     <h2>List of Tasks</h2>
     <button className="create-button" onClick={() => navigate("/tasks/create")}>Create Task</button>
+
     <article className="tasks">
             {
                 tasks.map(
                     (task) =>  <Task 
-                    taskObject={task} /> //TaskObj is a prop and then use it on  Task.js
+                    taskObject={task} taskSetter ={setTasks} /> //TaskObj is a prop and then use it on  Task.js
                 )
+                
             }
+              
         </article>
     </>
 
