@@ -11,7 +11,7 @@ export const ChildList = ({child}) => {
 
 
     useEffect(() => {
-        fetch (`http://localhost:8088/child`)
+        fetch (`http://localhost:8088/children`)
         .then(response => response.json())
         .then(children => {
             setChild (children)

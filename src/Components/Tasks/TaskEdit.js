@@ -72,20 +72,7 @@ export const TaskEdit = () => {
                         } />
                 </div>
             </fieldset>
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="child">Child Name</label>
-                    <input type="text"
-                        value={task.childId}
-                        onChange={
-                            (evt) => {
-                                const copy = {...task}
-                                copy.childId = evt.target.value 
-                                saveTask (copy)
-                            }
-                        } />
-                          </div>
-            </fieldset> 
+     
         <button
             onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
             className="btn-save-edit">
