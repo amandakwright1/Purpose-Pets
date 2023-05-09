@@ -3,7 +3,7 @@
     flex-direction: column;
 } */
 body {
-    background-color: palegreen;
+    background-color: #38EAEA;
   }
   
 .tasks {
@@ -16,14 +16,14 @@ body {
 
 .create-button {
     margin-left:auto;
-    background-color:   rgb(58, 242, 242);
+    background-color:   rgb(239, 241, 160);
     border: 4px solid rgb(3, 87, 87);
 }
 /* } Create task button */
 
 .btn-save-edit{
     margin-left:auto;
-    background-color:  rgb(58, 242, 242);
+    background-color:   rgb(239, 241, 160);
     border: 4px solid rgb(3, 87, 87);
 }
 /* } Edit task button */
@@ -31,7 +31,7 @@ body {
 
 .btn-delete{
     margin-left:auto;
-    background-color:  rgb(58, 242, 242);
+    background-color:  rgb(239, 241, 160);
     border: 4px solid rgb(3, 87, 87);
 }
 /*  Delete Task Button */

@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
+import { ChildSelect } from "../Child/ChildSelect"
 
 export const TaskForm = () => {
     /*
@@ -9,9 +10,19 @@ export const TaskForm = () => {
     const [task, update] = useState({
         email: "",
         fullName: "",
-        isGuardian: false
+        isGuardian: false,
+        childId:""              
     })
     
+    const inputOnChange = (event) => {
+       
+        const copy = {...task}
+        copy[`${event.target.name}`] = event.target.value
+        update(copy)
+    }
+
+
+
     /*
          Use the useNavigation() hook so you can redirect
         the user to the ticket list
@@ -28,8 +39,8 @@ export const TaskForm = () => {
         const taskToSendToApi = {
             userId: parentObject.id,
             description: task.description,
-            pointValue: task.pointValue,
-            child: task.childId
+            pointValue: +task.pointValue, 
+            childId: +task.childId 
         }
 
         //  Perform the fetch() to POST the object to the API
@@ -82,20 +93,8 @@ export const TaskForm = () => {
                         } />
                 </div>
             </fieldset>
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="child">Child Name</label>
-                    <input type="text"
-                        value={task.childId}
-                        onChange={
-                            (evt) => {
-                                const copy = {...task}
-                                copy.childId = evt.target.value 
-                                update (copy)
-                            }
-                        } />
-                          </div>
-            </fieldset> 
+            <ChildSelect handleChange={inputOnChange}/>
+         
             <button 
             onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
             className="btn btn-primary">

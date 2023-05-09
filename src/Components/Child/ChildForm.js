@@ -19,14 +19,14 @@ export const ChildForm = ({updateChild}) => {
         }
 
       
-            fetch (`http://localhost:8088/child`, {
+            fetch (`http://localhost:8088/children`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify(newChild),
             })
-            .then(() => fetch(`http://localhost:8088/child?_expand=child`))
+            .then(() => fetch(`http://localhost:8088/children?_expand=children`))
             .then(r => r.json())
             .then(() => {
                 navigate("/children")

@@ -29,9 +29,11 @@ export const Task = ({ taskObject, taskSetter }) => {
 
     return (
         <>
+        {/* <h2>{taskObject.child?.name}</h2> */}
             <h2>{taskObject.description}</h2>
             <ul>
-                <li>{taskObject.pointValue}</li>
+                <li>{taskObject.pointValue} points</li>
+                <li>{taskObject.child.name}</li>
 
             </ul>
             {/* {taskObject.isGuardian ? <> */}
