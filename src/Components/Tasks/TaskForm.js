@@ -2,6 +2,8 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { ChildSelect } from "../Child/ChildSelect"
 
+// import React from 'react';
+
 export const TaskForm = () => {
     /*
          Add the correct default properties to the
@@ -43,8 +45,8 @@ export const TaskForm = () => {
             childId: +task.childId 
         }
 
-        //  Perform the fetch() to POST the object to the API
-        return fetch (`http://localhost:8088/tasks
+        if (taskToSendToApi.childId){  //This is where it checks to see if a child has been selected. If user tries to submit without selecting a child a window alert pops up.
+            return fetch (`http://localhost:8088/tasks
         `, {
             method: "POST",
             headers: {
@@ -56,9 +58,15 @@ export const TaskForm = () => {
         .then(() => {
              navigate("/tasks")
         })
+        }
+        else {window.alert ("Please select a child for task")}
+
+
+
     }
 
     return (
+        <>
         <form className="taskForm">
             <h2 className="taskForm__title">New Task</h2>
             <fieldset>
@@ -93,7 +101,7 @@ export const TaskForm = () => {
                         } />
                 </div>
             </fieldset>
-            <ChildSelect handleChange={inputOnChange}/>
+            <ChildSelect required handleChange={inputOnChange}/>
          
             <button 
             onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
@@ -101,5 +109,22 @@ export const TaskForm = () => {
                 Submit Task
             </button>
         </form>
+
+        <PictureChart/>
+        </>
+       
     )
-                    }               
+    
+  
+    
+                    }  
+                    
+                    
+                    export const PictureChart=()=> {
+
+                        return <img className="chart" src="/ChoreChart.jpg" alt="chart" />
+                            
+
+                         
+                    }    
+                

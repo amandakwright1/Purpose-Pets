@@ -9,7 +9,7 @@ export const Child = ({child}) => {
         <>
             <h2>{child.name}</h2>
             
-                <li>{child.userName}</li>
+                <li>{child.email}</li>
 
         </>
 
