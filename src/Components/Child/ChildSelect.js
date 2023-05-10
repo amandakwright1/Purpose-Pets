@@ -22,7 +22,7 @@ export const ChildSelect = ({handleChange}) => {
     return(
 
             <select  name="childId" required className="childSelect" onChange={handleChange}> 
-                <option  value="">Assign Child</option>
+                <option value="">Assign Child</option>
                 {children.map(child => <option key={child.id} value={child.id}>{child.name}</option>)}
             </select>
     )

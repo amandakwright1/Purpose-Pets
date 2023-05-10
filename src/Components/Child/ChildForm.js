@@ -15,7 +15,7 @@ export const ChildForm = ({updateChild}) => {
 
         const newChild ={                         
             name: child.name,
-            userName: child.userName
+            email: child.email
         }
 
       
@@ -39,7 +39,6 @@ export const ChildForm = ({updateChild}) => {
        
             const copy = {...child}
             copy[`${event.target.name}`] = event.target.value
-            // copy[`${event.target.userName}`] = event.target.value
             update(copy)
         
     }
@@ -65,14 +64,14 @@ export const ChildForm = ({updateChild}) => {
             </fieldset>
             <fieldset>
             <div className="form-group">
-                    <label htmlFor="name">username: </label>
+                    <label htmlFor="name">email: </label>
                     <input
-                    name="userName"
+                    name="email"
                         required autoFocus
                         type="text"
                         className="form-control"
-                        placeholder="type a username for your child here ..."
-                        value={child.userName}
+                        placeholder="add your child's email address ..."
+                        value={child.email}
                          onChange={inputOnChange}
                          
                         />
