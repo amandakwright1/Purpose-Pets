@@ -1,7 +1,7 @@
 import { Outlet, Route, Routes } from "react-router-dom"
-
 import { TaskList } from "../Tasks/TaskList"
-//import { ChildList } from "../Child/ChildList"
+import { PetList } from "../Pets/PetList"
+// import { DogImage } from "../Pets/PetList"
 
 
 
@@ -20,8 +20,9 @@ export const ChildViews = () => {
             }>
                 
                 <Route path="tasks" element={ < TaskList /> } />  
-              
-
+                <Route path="pets" element={ < PetList /> } />
+                 
+                 {/* <DogImage /> */}
               
             </Route>
         </Routes>
