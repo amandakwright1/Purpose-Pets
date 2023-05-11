@@ -5,6 +5,8 @@ export const ChildNav = () => {
     const navigate = useNavigate()
 
     return (
+        <>
+        <h1 className="purposeheader">Purpose Pets</h1>
         <ul className="navbar">
             <li className="navbar__item active">
                 <Link className="navbar__link" to="/tasks">Tasks</Link>
@@ -24,5 +26,6 @@ export const ChildNav = () => {
                     : ""                   
             }
         </ul>
+        </>
     )
 }

@@ -16,7 +16,7 @@ export const Task = ({ taskObject, taskSetter }) => {
             method: "DELETE"
         })
              .then(() => {
-                fetch(`http://localhost:8088/tasks`)
+                fetch (`http://localhost:8088/tasks?_expand=child`)
                     .then(response => response.json())
                     .then(tasks => {
                         taskSetter(tasks)

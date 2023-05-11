@@ -78,7 +78,7 @@ export const Register = (props) => {
                     <label htmlFor="email"> I am a Guardian </label>
                 </fieldset>
                 <fieldset>
-                    <button type="submit"> Register </button>
+                    <button className="submit" type="submit"> Register </button>
                 </fieldset>
             </form>
         </main>

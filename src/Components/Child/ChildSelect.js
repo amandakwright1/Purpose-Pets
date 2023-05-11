@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react"
-
+import "./Child.css"
 
 
 
 export const ChildSelect = ({handleChange}) => {  
 
     const [children, setChildren] = useState([])
-    // const [childUser, parentUser] = useState([])
+    
        
    
 
