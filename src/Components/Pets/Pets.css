@@ -1,0 +1,49 @@
+.div1{
+    float: left;
+  width: 33.33%;
+  text-align: center;
+}
+
+.div2{
+    float: left;
+  width: 33.33%;
+  text-align: center;
+}
+
+ .div3{
+    float: left;
+  width: 33.33%;
+  text-align: center;
+ }
+
+ .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+.dog {
+    padding: 5%;
+    height: 50%;
+    width: 50%;
+    border: 3px solid red; 
+    
+}
+
+.hamster {
+    padding: 5%;
+    border: 3px solid red; 
+}
+
+.horse {
+    padding: 5%;
+    height: 40%;
+    width: 40%;
+    border: 3px solid red; 
+}
+
+.petShop-header{
+    text-align: center;
+    font-family: Georgia, serif;
+    
+}
