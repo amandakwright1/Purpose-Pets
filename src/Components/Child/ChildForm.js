@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
+import "./Child.css"
 
 
 
@@ -19,15 +20,13 @@ export const ChildForm = ({updateChild}) => {
         }
 
       
-            fetch (`http://localhost:8088/children`, {
+            return fetch (`http://localhost:8088/children`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify(newChild),
             })
-            .then(() => fetch(`http://localhost:8088/children?_expand=children`))
-            .then(r => r.json())
             .then(() => {
                 navigate("/children")
         });
@@ -77,7 +76,7 @@ export const ChildForm = ({updateChild}) => {
                         />
                 </div>
             </fieldset>
-            <button className="btn btn-primary">
+            <button className="create-button">
                 Submit 
             </button>
         </form>

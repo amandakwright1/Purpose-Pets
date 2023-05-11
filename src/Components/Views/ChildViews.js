@@ -12,7 +12,7 @@ export const ChildViews = () => {
         <Routes>
             <Route path="/" element={
                 <>
-                    <h1>Purpose Pets</h1>
+                    {/* <h1>Purpose Pets</h1> */}
                     
 
                     <Outlet />
